@@ -1,0 +1,160 @@
+:root {
+    --bg-color: #000000;
+    --fg-color: #ffffff;
+    --border-color: #ffffff;
+    --dim-color: #333333;
+    --font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#gameboard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-grow: 1;
+}
+
+.player-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hand {
+    display: flex;
+    position: relative;
+}
+
+.horizontal .hand {
+    flex-direction: row;
+    height: 80px;
+}
+
+.vertical .hand {
+    flex-direction: column;
+    width: 60px;
+}
+
+/* Card Styling */
+.card {
+    width: 50px;
+    height: 70px;
+    border: 2px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: default;
+    user-select: none;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.card-back {
+    background: repeating-linear-gradient(
+        45deg,
+        var(--bg-color),
+        var(--bg-color) 5px,
+        var(--dim-color) 5px,
+        var(--dim-color) 10px
+    );
+    border: 2px solid var(--border-color);
+}
+
+.horizontal .card { margin-left: -25px; }
+.horizontal .card:first-child { margin-left: 0; }
+
+.vertical .card { margin-top: -50px; }
+.vertical .card:first-child { margin-top: 0; }
+
+#human-hand .card {
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#human-hand .card:hover {
+    transform: translateY(-10px);
+}
+
+#human-hand .card.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+#play-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--dim-color);
+    margin: 10px;
+    position: relative;
+}
+
+#status {
+    position: absolute;
+    top: 10px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--bg-color);
+    padding: 2px 5px;
+}
+
+#table-cards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.table-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.table-player-name {
+    font-size: 10px;
+    color: var(--dim-color);
+}

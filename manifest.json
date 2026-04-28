@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Bhabhi Card Game",
+  "description": "Minimalist monochrome Bhabhi (Get Away) card game.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}

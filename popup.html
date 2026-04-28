@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhabhi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameboard">
+        <div id="cpu-top" class="player-area horizontal">
+            <div class="player-label">CPU 2 (Top) <span class="card-count">13</span></div>
+            <div class="hand" id="hand-cpu2"></div>
+        </div>
+        <div class="middle-section">
+            <div id="cpu-left" class="player-area vertical">
+                <div class="player-label">CPU 1 (Left) <br><span class="card-count">13</span></div>
+                <div class="hand" id="hand-cpu1"></div>
+            </div>
+            
+            <div id="play-area">
+                <div id="status">Starting Game...</div>
+                <div id="table-cards"></div>
+            </div>
+
+            <div id="cpu-right" class="player-area vertical">
+                <div class="player-label">CPU 3 (Right) <br><span class="card-count">13</span></div>
+                <div class="hand" id="hand-cpu3"></div>
+            </div>
+        </div>
+        <div id="human-hand" class="player-area horizontal active">
+            <div class="player-label">You <span class="card-count">13</span></div>
+            <div class="hand" id="hand-human"></div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
