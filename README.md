@@ -1,6 +1,6 @@
 # Bhabho (Get Away) Card Game - Chrome Extension
 
-A minimalist, high-contrast, monochrome (Black & White) Chrome Extension implementation of the traditional Punjabi card game "Bhabho", also known as "Get Away".
+A minimalist, high-contrast, monochrome (Black & White) Chrome Extension implementation of the traditional Indian card game "Bhabho", also known as "Get Away".
 
 ## Features
 - **Monochrome Aesthetic**: Minimalist design inspired by the "Dino Jump" style to minimize eye impact.
